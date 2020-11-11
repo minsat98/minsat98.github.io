@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+}
+
+body{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+  font-weight: 400;
+  background-image: linear-gradient(120deg,#5cb5ae,#690fbd,#9a5cb5);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.first{
+  width: 100%;
+  height: 100vh;
+
+}
+
+
+/* CARDS*/
+.title{
+  width: 100%;
+  position: absolute;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  animation: title 3s;
+}
+h1{
+  letter-spacing: 8px;
+}
+
+h2 {
+  font-weight: bolder;
+}
+
+.title{
+  font-size: 30px;
+  position: relative;
+  margin-top: 18vh;
+  font-weight: 500;
+
+}
+
+@keyframes title {
+  0% {
+    color: black;
+    margin-bottom: -50px;
+  }
+
+  30% {
+    letter-spacing: 30px;
+    margin-bottom: -10px;
+  }
+
+  85% {
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
+  }
+
+.container2 {
+  position: relative;
+  width: 35vh;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 2vh;
+  margin-top: 6vh;
+  animation: box 3s 1;
+}
+
+@keyframes box {
+
+  0%{
+    opacity: 0;
+  }
+
+  90%{
+    opacity: 1;
+  }
+}
+
+.container2 .card {
+  max-width: 90vh;
+  position: sticky;
+  height:300px;
+  background-color: #262626;
+  margin: 30px 20px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.container2 .card:hover{
+  margin-top: 100px;
+  height: inherit;
+  transition-delay: 2s;
+}
+
+.container2 .card .imgBx {
+  position: relative;
+  width: 255px;
+  height: 260px;
+  top: -60px;
+  position: center;
+  margin: auto;
+  z-index:1;
+  shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.container2 .card .content{
+  position: relative;
+  margin-top: -100px;
+  padding: 7px 15px;
+  text-align: center;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.container2 .card:hover .content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -60px;
+  transition-delay: 0.2s;
+
+}
+
+.container2 .card .imgBx img {
+  max-width: 100%;
+  border-radius: 10px;
+  position: center;
+}
+
+@media screen and (max-width: 800px) {
+
+  .title {
+    display: flex;
+    place-items:center;
+
+  }
+}
